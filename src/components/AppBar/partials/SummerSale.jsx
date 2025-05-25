@@ -5,7 +5,7 @@ export default function SummerSale() {
   return (
     <div
       to="/sale"
-      className="relative flex items-center gap-1 font-bold text-color-primary text-[14px] leading-[20px] group"
+      className="relative cursor-pointer flex items-center gap-1 font-bold text-color-primary text-[14px] leading-[20px] group"
     >
       <span className="nav-text-hover">SUMMER SALE</span>
       <MdKeyboardArrowDown />

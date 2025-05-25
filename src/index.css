@@ -76,6 +76,9 @@
   --color-black: #000;
   --color-black-100: #00000040;
   --color-black-200: #e0e0e0;
+  --color-black-300: #232222;
 
   --color-pink: #ffd2d2;
+
+  --color-divider: #e2e2e2;
 }
