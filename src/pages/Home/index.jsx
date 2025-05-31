@@ -1,3 +1,4 @@
+import BannerPromotion from "./partials/BannerPromotion.jsx";
 import ListCategory from "./partials/ListCategory.jsx";
 import MainVisual from "./partials/MainVisual.jsx";
 
