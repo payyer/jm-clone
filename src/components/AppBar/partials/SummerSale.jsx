@@ -12,7 +12,7 @@ export default function SummerSale() {
       <span className="absolute -top-[calc(100%-4px)] right-0 text-[10px] p-1 rounded-t-[4px] rounded-bl-[4px]  bg-red text-white leading-[14px]">
         SALE
       </span>
-      <ul className="absolute opacity-0 invisible top-[calc(100%+4px)] w-[150px] py-[10px] shadow-xs bg-white group-hover:opacity-100 group-hover:visible translate-y-[50%] group-hover:translate-y-[0%] transition-all duration-500 ease-in-out">
+      <ul className="absolute z-[2] rounded-b-[4px] shadow-2xl opacity-0 invisible top-[calc(100%+4px)] w-[150px] py-[10px] shadow-xs bg-white group-hover:opacity-100 group-hover:visible translate-y-[50%] group-hover:translate-y-[0%] transition-all duration-500 ease-in-out">
         <Link to="/sale" className="summer-sale__li">
           Đồng giá chỉ từ
           <br /> 225k

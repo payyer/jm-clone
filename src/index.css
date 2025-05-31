@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @layer components {
+  input {
+    outline: none;
+    border: none;
+  }
   .nav-text-hover {
     display: block;
     position: relative;
@@ -66,12 +70,16 @@
   --color-*: initial;
   --color-red: #c61b1b;
   --color-red-100: #ff0000;
+  --color-red-200: #d40404;
   --color-white: #fff;
   --color-gray: #f2f2f2;
   --color-gray-100: #989898;
   --color-gray-200: #656565;
   --color-gray-300: #666666;
   --color-gray-400: #303030;
+  --color-gray-500: #e2e2e2;
+  --color-gray-600: #e5e5e5;
+  --color-gray-700: #eee;
 
   --color-black: #000;
   --color-black-100: #00000040;

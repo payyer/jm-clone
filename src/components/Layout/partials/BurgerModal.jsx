@@ -22,7 +22,7 @@ export default function BurgerModal() {
   return (
     <div
       onClick={closeModal}
-      className={`fixed bg-black/65  transition-effect inset-0 ${
+      className={`fixed bg-black/65 z-[2] transition-effect inset-0 ${
         isOpenBurgerModal
           ? "bg-black/65  pointer-events-auto"
           : "bg-transparent pointer-events-none"
@@ -83,7 +83,7 @@ export default function BurgerModal() {
 
           {APP_BAR_CATEGORIES?.map((data, index) => (
             <li
-              id={index}
+              key={index}
               className="group cursor-pointer w-full flex flex-col items-baseline justify-center font-bold uppercase text[14px] text-gray-400"
             >
               <Link
@@ -106,7 +106,7 @@ export default function BurgerModal() {
         </h5>
         <ul>
           {APP_BAR_POLICY?.map((data, index) => (
-            <li id={index} className="group">
+            <li key={index} className="group">
               <Link to={data?.link} className="flex items-center">
                 <span className="nav-text-hover group-hover:after:left-0 group-hover:after:bg-red w-fit text-[14px] leading-[28px] text-gray-200 font-medium">
                   {data?.text}
