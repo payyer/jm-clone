@@ -1,3 +1,4 @@
+import ListCategory from "./partials/ListCategory.jsx";
 import MainVisual from "./partials/MainVisual.jsx";
 
 export default function Home() {
@@ -8,6 +9,10 @@ export default function Home() {
       </h1>
 
       <MainVisual />
+
+      <ListCategory />
+
+      <BannerPromotion />
     </>
   );
 }
