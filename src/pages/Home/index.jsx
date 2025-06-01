@@ -1,4 +1,5 @@
 import BannerPromotion from "./partials/BannerPromotion.jsx";
+import HotProduct from "./partials/HotProduct.jsx";
 import ListCategory from "./partials/ListCategory.jsx";
 import MainVisual from "./partials/MainVisual.jsx";
 
@@ -14,6 +15,8 @@ export default function Home() {
       <ListCategory />
 
       <BannerPromotion />
+
+      <HotProduct />
     </>
   );
 }

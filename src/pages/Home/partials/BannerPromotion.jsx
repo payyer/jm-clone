@@ -18,7 +18,7 @@ export default function BannerPromotion() {
               alt={data?.altText}
               loading="lazy"
               decoding="async"
-              className="w-full h-full transition-effect object-contain sm:object-cover group-hover:scale-[1.2] group-hover:opacity-70"
+              className="w-full h-full transition-effect object-contain sm:object-cover group-hover:scale-[1.2] "
             />
           </Link>
         );

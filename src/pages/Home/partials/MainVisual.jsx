@@ -1,8 +1,6 @@
-import "swiper/css";
 import { Link } from "react-router";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import {
   mv01,
   mv02,

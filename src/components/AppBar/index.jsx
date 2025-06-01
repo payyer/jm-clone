@@ -6,8 +6,8 @@ import AppBarCategories from "./partials/AppBarCategories";
 
 export default function AppBar() {
   return (
-    <nav>
-      <div className="h-[54px] sm:h-[94px] bg-white flex items-center justify-center border-b-1 border-black-100 sm:border-0">
+    <nav className="">
+      <div className="fixed z-[100] left-0 w-full top-0 h-[54px] sm:h-[94px] bg-white flex items-center justify-center border-b-1 border-black-100 ">
         <div className="relative h-full sm:h-[48px] max-w-[1240px] px-[16px] sm:px-[20px] w-full flex items-center justify-between">
           <Burger />
           <Logo />
