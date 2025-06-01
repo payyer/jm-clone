@@ -60,7 +60,7 @@ const category = {
 };
 export default function SubAppBar() {
   return (
-    <div className="sm:pt-[94px] sm:bg-gray">
+    <div className="pt-[54px] sm:pt-[94px] sm:bg-gray">
       <ul className="flex flex-wrap sm:hidden items-center justify-center gap-x-[16px] py-[16px]">
         {category?.section01?.map((data, index) => (
           <li key={index}>

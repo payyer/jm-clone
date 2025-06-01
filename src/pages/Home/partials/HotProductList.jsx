@@ -26,8 +26,11 @@ export default function HotProductList() {
           768: {
             slidesPerView: 3,
           },
-          320: {
+          375: {
             slidesPerView: 2,
+          },
+          320: {
+            slidesPerView: 1,
           },
         }}
       >
