@@ -5,12 +5,14 @@
     outline: none;
     border: none;
   }
+
   .nav-text-hover {
     display: block;
     position: relative;
     overflow-x: hidden;
     padding-bottom: 4px;
     margin-top: 4px;
+
     &::after {
       position: absolute;
       content: "";
@@ -21,14 +23,17 @@
       left: -100%;
       transition: all 0.2s linear;
     }
+
     &:hover::after {
       left: 0;
       background-color: var(--color-red);
     }
   }
+
   .hover-effect {
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
+
     &:hover {
       opacity: 0.7;
     }
@@ -44,6 +49,7 @@
     margin: auto;
     min-height: 52px;
     transition: all 0.2s ease-in-out;
+
     &:hover {
       background-color: var(--color-red);
       color: var(--color-white);
@@ -57,6 +63,23 @@
   .swiper-pagination-bullet-active {
     background-color: var(--color-gray-400) !important;
   }
+
+  .main-container {
+    max-width: 1284px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  .hover-effect {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
 }
 
 @theme {

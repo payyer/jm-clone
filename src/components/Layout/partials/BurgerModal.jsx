@@ -22,17 +22,15 @@ export default function BurgerModal() {
   return (
     <div
       onClick={closeModal}
-      className={`fixed bg-black/65 z-[2] transition-effect inset-0 ${
-        isOpenBurgerModal
-          ? "bg-black/65  pointer-events-auto"
-          : "bg-transparent pointer-events-none"
-      }`}
+      className={`fixed bg-black/65 z-[2] transition-effect inset-0 ${isOpenBurgerModal
+        ? "bg-black/65  pointer-events-auto"
+        : "bg-transparent pointer-events-none"
+        }`}
     >
       <aside
         onClick={(e) => e.stopPropagation()}
-        className={`relative overflow-y-auto max-w-[355px] w-full h-dvh pl-[26px] pr-[30px] py-[40px]  bg-white transition-effect ${
-          isOpenBurgerModal ? "left-0" : "-left-full"
-        }`}
+        className={`relative overflow-y-auto max-w-[355px] w-full h-dvh pl-[26px] pr-[30px] py-[40px] pt-[80px] sm:pt-[120px] bg-white transition-effect ${isOpenBurgerModal ? "left-0" : "-left-full"
+          }`}
       >
         {/* Categories */}
         <ul>
@@ -54,15 +52,13 @@ export default function BurgerModal() {
               </span>
 
               <MdKeyboardArrowRight
-                className={`w-[26px] h-auto ${
-                  isOpenSale && "rotate-90"
-                } transition-effect`}
+                className={`w-[26px] h-auto ${isOpenSale && "rotate-90"
+                  } transition-effect`}
               />
             </Link>{" "}
             <ul
-              className={`${
-                isOpenSale ? "h-[84px]" : "h-0 "
-              } overflow-hidden pl-[24px] flex flex-col gap-5 transition-effect duration-150`}
+              className={`${isOpenSale ? "h-[84px]" : "h-0 "
+                } overflow-hidden pl-[24px] flex flex-col gap-5 transition-effect duration-150`}
             >
               <li>
                 <Link>

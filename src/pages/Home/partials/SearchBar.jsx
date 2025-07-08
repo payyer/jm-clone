@@ -1,6 +1,6 @@
-export default function SearchBar() {
+export default function SearchBar({ className }) {
   return (
-    <form className="hidden sm:flex absolute bottom-[20px] bg-white max-w-[680px] rounded-[4px] overflow-hidden border-1 border-white w-full h-[40px] left-1/2 -translate-x-1/2 z-[2]">
+    <form className={`hidden sm:flex absolute bottom-[20px] bg-white max-w-[680px] rounded-[4px] overflow-hidden border-1 border-white w-full h-[40px] left-1/2 -translate-x-1/2 z-[2] ${className}`}>
       <input
         type="text"
         className="flex-1 outline-transparent px-6 text-[14px] focus:outline-black-300 text-black "

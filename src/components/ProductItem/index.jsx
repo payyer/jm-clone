@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function ProductItem() {
   const [productColor, setProductColor] = useState(product_02);
   return (
-    <Link to={"/"}>
+    <Link to={"/product/1"}>
       <img
         src={productColor}
         width={187}

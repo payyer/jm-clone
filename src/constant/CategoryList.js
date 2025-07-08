@@ -1,37 +1,37 @@
 import { clothes, dress, jacket, pants, skirts } from "../assets/ListCategory";
 const CATEGORY_LIST = [
   {
-    link: "/",
+    link: `/search?category=dress`,
     text: "Đầm",
     imgLink: dress,
   },
   {
-    link: "/",
+    link: "/search?category=clothes",
     text: "Áo",
     imgLink: clothes,
   },
   {
-    link: "/",
+    link: "/search?category=pants",
     text: "Quần",
     imgLink: pants,
   },
   {
-    link: "/",
+    link: "/search?category=skirts",
     text: "Chân váy",
     imgLink: skirts,
   },
   {
-    link: "/",
+    link: "/search?category=jacket",
     text: "Áo khoác",
     imgLink: jacket,
   },
   {
-    link: "/",
+    link: "/search?sale=true",
     text: "Sale",
     imgLink: dress,
   },
   {
-    link: "/",
+    link: "/search?category=accessories",
     text: "Phụ kiện",
     imgLink: dress,
   },
