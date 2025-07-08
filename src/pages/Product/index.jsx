@@ -1,5 +1,7 @@
 export default function ProductPage() {
     return (
-        <div>Detail</div>
+        <div className="main-container ">
+            Hello
+        </div>
     )
 }

@@ -1,8 +1,8 @@
 import { Link, useSearchParams } from "react-router";
 
-export default function Pagination({ className, currentPage, totalPage = 5 }) {
+export default function Pagination({ className, totalPage = 5 }) {
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     let pageActive = Number(searchParams.get("page") || 1)
     const currentParams = Object.fromEntries(searchParams.entries())
 
@@ -15,8 +15,10 @@ export default function Pagination({ className, currentPage, totalPage = 5 }) {
     return (
         <div className={className}>
             <ul className="flex items-center justify-center gap-2">
-                <li >
-                    <Link to={createPageLink(pageActive - 1)} className="flex items-center justify-center w-[50px] h-[40px] rounded-full cursor-pointer ">Prev</Link>
+                <li>
+                    <Link to={createPageLink(pageActive + 1)} className="p-2 px-4 rounded-full cursor-pointer">
+                        Next
+                    </Link>
                 </li>
 
                 {Array.from({ length: totalPage }).map((_, index) =>
@@ -29,9 +31,13 @@ export default function Pagination({ className, currentPage, totalPage = 5 }) {
                     </li>
                 )}
 
-                <li >
-                    <button className="flex items-center justify-center w-[50px] h-[40px] rounded-full cursor-pointer " onClick={createPageLink}>Next</button>
-                </li>
+                {pageActive < totalPage && (
+                    <li>
+                        <Link to={createPageLink(pageActive + 1)} className="p-2 px-4 rounded-full cursor-pointer">
+                            Next
+                        </Link>
+                    </li>
+                )}
 
             </ul>
         </div>
