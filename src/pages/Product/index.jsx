@@ -1,7 +1,11 @@
+import SearchBar from "../../components/SearchBar";
+import ProductDetail from "./partial/ProductDetail";
+
 export default function ProductPage() {
     return (
-        <div className="main-container ">
-            Hello
-        </div>
+        <section className="main-container ">
+            <SearchBar />
+            <ProductDetail />
+        </section>
     )
 }

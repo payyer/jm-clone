@@ -20,7 +20,7 @@ export default function ProductColors({ setProductColor }) {
           <span className="block border border-border w-4 h-4 rounded-full  bg-[#000]"></span>
         </li>
       </ul>
-      <button className="cursor-pointer">
+      <button title="Add to favorite product button" className="cursor-pointer">
         <IoMdHeartEmpty className="text-[18px] hover:text-red-200" />
       </button>
     </div>

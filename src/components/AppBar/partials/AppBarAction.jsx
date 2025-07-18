@@ -7,7 +7,7 @@ import { FaRegHeart } from "react-icons/fa6";
 export default function AppBarAction() {
   return (
     <div className="flex gap-[12px] sm:gap-[20px] ">
-      <button className="sm:hidden hover-effect hover:text-red">
+      <button title="Search button" className="sm:hidden hover-effect hover:text-red">
         <IoSearch className="w-[20px] h-auto " />
       </button>
 

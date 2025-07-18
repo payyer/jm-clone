@@ -10,6 +10,7 @@ export default function Burger() {
 
   return (
     <button
+      title="Burger button"
       onClick={openModal}
       className="hover-effect hover:text-red block lg:hidden "
     >
