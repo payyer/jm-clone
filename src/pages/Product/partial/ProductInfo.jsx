@@ -1,3 +1,4 @@
+import { Button } from "../../../components/ui/button";
 import ProductForm from "./ProductForm";
 
 export default function ProductInfo() {
