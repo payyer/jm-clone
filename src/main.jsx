@@ -9,11 +9,13 @@ import ProductPage from "./pages/Product";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import SearchPage from "./pages/Search";
+import ScrollToTop from "./lib/ScrollToTop";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
