@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import ProductItem from "../../../components/ProductItem";
 
-export default function HotProductList() {
+export default function SuggestedProductList() {
   return (
     <>
       <Swiper

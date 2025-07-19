@@ -1,18 +1,24 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/pagination';
 import { product_02 } from "../../../assets/Products";
 import { useState } from 'react';
+import ProductGalleryThumb from './ProductGalleryThumb';
 
 export default function ProductImageGallery() {
     const [thumb, setThumb] = useState(product_02)
     return (
-        <div className="flex gap-[16px] w-1/2 justify-center">
+        <div className="flex flex-col-reverse self-start sm:flex-row gap-[30px] w-full items-center sm:w-1/2 justify-center sm:justify-start">
             <Swiper
                 slidesPerView={6}
                 spaceBetween={10}
-                direction={'vertical'}
-                className="mySwiper"
-                style={{ height: "600px", width: "70px", margin: "unset" }}
+                className="mySwiper swiper-gallery"
+                breakpoints={{
+                    767: {
+                        direction: "horizontal",
+                    },
+                    768: {
+                        direction: "vertical"
+                    }
+                }}
             >
                 {Array.from({ length: 10 }).map((_, index) =>
                     <SwiperSlide >
@@ -22,10 +28,7 @@ export default function ProductImageGallery() {
                     </SwiperSlide>)
                 }
             </Swiper>
-
-            <div className='h-[600px]'>
-                <img className='w-auto h-full object-contain' src={thumb} width={462} height={592} alt="Thumb image" loading='lazy' />
-            </div>
+            <ProductGalleryThumb thumb={thumb} />
         </div>
     )
 }

@@ -35,15 +35,23 @@ export default function ProductForm() {
                 <span className="min-w-[80px] text-[16px] text-gray-400 font-medium">Số lượng:</span>
 
                 <button type="button"><FaMinus /></button>
-                <input className="w-[40px] text-center" id="count" type="text" value={1} />
+                <input className="w-[40px] text-center" id="count" type="text" defaultValue={1} />
                 <label htmlFor="count" title="count" className="hidden"></label>
                 <button type="button"><FaPlus /></button>
             </div>
 
-            <div className="flex items-center gap-4 text-[14px] font-medium h-[54px]">
-                <button type="button" className="flex items-center justify-center text-[20px] text-[#303030] w-[54px] h-full rounded-[4px] bg-[#E9E9E9]"><FaRegHeart /></button>
-                <button type="button" className="text-[14px] uppercase font-medium px-[40px] border-black border-[1px] rounded-[4px] h-full"><span>Thêm vào giỏ hàng</span></button>
-                <button type="button" className="text-[14px] uppercase font-medium px-[40px] border-black border-[1px] rounded-[4px] h-full text-white bg-black"><span>Mua ngay</span></button>
+            <div className="hidden sm:flex items-center gap-4 text-[14px] font-medium h-[54px] ">
+                <button type="button" title="Yêu thích sản phẩm" className="flex shrink-0 items-center justify-center text-[20px] text-[#303030] w-[54px] h-full rounded-[4px] bg-[#E9E9E9]"><FaRegHeart /></button>
+                <button type="button" title="Thêm vào giỏ hàng" className="text-[14px] uppercase font-medium px-[18px] border-black border-[1px] rounded-[4px] h-full"><span>Thêm vào giỏ hàng</span></button>
+                <button type="button" title="Mua ngay" className="text-[14px] uppercase font-medium px-[18px] border-black border-[1px] rounded-[4px] h-full text-white bg-black"><span>Mua ngay</span></button>
+            </div>
+
+            <div className="fixed sm:hidden z-[99] left-0 bg-white w-full flex gap-4 bottom-0 h-[84px] p-[15px] border-t-[1px] border-b-[#00000040]">
+                <div className="flex-1 gap-4 flex items-center ">
+                    <button type="button" title="Thêm vào giỏ hàng" className="text-[14px] uppercase font-medium px-[18px] border-black border-[1px] rounded-[4px]  w-[50%] h-full"><span>Thêm vào giỏ hàng</span></button>
+                    <button type="button" title="Mua ngay" className="text-[14px] uppercase font-medium px-[18px] border-black border-[1px] rounded-[4px] h-full w-[50%]  text-white bg-black"><span>Mua ngay</span></button>
+                </div>
+                <button type="button" title="Yêu thích sản phẩm" className="flex items-center justify-center text-[20px] text-[#303030] w-[54px] h-full rounded-[4px] bg-[#E9E9E9]"><FaRegHeart /></button>
             </div>
         </form>
     )

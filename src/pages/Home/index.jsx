@@ -1,7 +1,7 @@
 import BannerPromotion from "./partials/BannerPromotion.jsx";
-import HotProduct from "./partials/HotProduct.jsx";
 import ListCategory from "./partials/ListCategory.jsx";
 import MainVisual from "./partials/MainVisual.jsx";
+import SuggestedProduct from "./partials/SuggestedProduct.jsx";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
 
       <BannerPromotion />
 
-      <HotProduct />
+      <SuggestedProduct heading={"sản phẩm bán chạy"} />
     </>
   );
 }

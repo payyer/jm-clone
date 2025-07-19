@@ -1,4 +1,4 @@
-import { Button } from "../../../components/ui/button";
+import ProductDetailInfo from "./ProductAccordion";
 import ProductForm from "./ProductForm";
 
 export default function ProductInfo() {
@@ -9,7 +9,8 @@ export default function ProductInfo() {
 
             <ProductForm />
 
-            <div className=""></div>
+            <ProductDetailInfo />
+
         </div>
     )
 }
