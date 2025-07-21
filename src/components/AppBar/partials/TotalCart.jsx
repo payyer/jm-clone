@@ -9,7 +9,7 @@ export default function TotalCart() {
       </div>
       <Link
         className="flex justify-center items-center bg-gray-400 h-10 text-white font-bold mt-4 hover-effect rounded-[4px]"
-        to={"/"}
+        to={"/cart"}
       >
         XEM GIỎ HÀNG
       </Link>

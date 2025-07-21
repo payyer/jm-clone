@@ -33,7 +33,6 @@ export default function ProductForm() {
 
             <div className="flex items-center gap-4 text-[14px] font-medium">
                 <span className="min-w-[80px] text-[16px] text-gray-400 font-medium">Số lượng:</span>
-
                 <button type="button"><FaMinus /></button>
                 <input className="w-[40px] text-center" id="count" type="text" defaultValue={1} />
                 <label htmlFor="count" title="count" className="hidden"></label>

@@ -1,5 +1,5 @@
 import { createSearchParams, useNavigate, useSearchParams } from "react-router"
-export default function SearchBar({ className, extendSearchParams }) {
+export default function SearchBar({ className }) {
     const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams()
     const handleSearch = (event) => {

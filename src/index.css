@@ -135,6 +135,30 @@
       }
     }
   }
+
+  .cart-container {
+    display: flex;
+    gap: 2%;
+    margin-top: 32px;
+
+    .cart-container--left {
+      width: 68%;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+
+    .cart-container--right {
+      width: 30%;
+      padding: 24px;
+      background-color: #f6f6f6;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @theme {

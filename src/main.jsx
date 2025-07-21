@@ -10,6 +10,8 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import SearchPage from "./pages/Search";
 import ScrollToTop from "./lib/ScrollToTop";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -25,6 +27,10 @@ createRoot(document.getElementById("root")).render(
           </Route>
           <Route path="/search" element={<Layout />}>
             <Route index element={<SearchPage />} />
+          </Route>
+          <Route path="cart" element={<Layout />}>
+            <Route index element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
           </Route>
         </Routes>
       </BrowserRouter>
