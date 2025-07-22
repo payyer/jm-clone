@@ -144,17 +144,18 @@
     .cart-container--left {
       width: 68%;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         width: 100%;
       }
     }
 
     .cart-container--right {
       width: 30%;
+      height: fit-content;
       padding: 24px;
       background-color: #f6f6f6;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         width: 100%;
       }
     }

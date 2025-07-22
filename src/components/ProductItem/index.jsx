@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import { product_02 } from "../../assets/Products";
 import ProductColors from "./partials/ProductColors";
-import ProductRating from "./partials/ProductRating";
 import { useState } from "react";
 export default function ProductItem() {
   const [productColor, setProductColor] = useState(product_02);
@@ -23,8 +22,6 @@ export default function ProductItem() {
       <ProductColors setProductColor={setProductColor} />
 
       <span className=" text-red-200 text-[14px] font-medium">525,000đ</span>
-
-      <ProductRating />
     </Link>
   );
 }

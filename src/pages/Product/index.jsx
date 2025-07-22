@@ -1,7 +1,7 @@
 import SearchBar from "../../components/SearchBar";
 import ProductDetail from "./partial/ProductDetail";
-import ProductRating from "./partial/ProductRating";
 import SuggestedProduct from "../Home/partials/SuggestedProduct"
+import ProductRating from "./partial/ProductRating";
 
 export default function ProductPage() {
     return (
