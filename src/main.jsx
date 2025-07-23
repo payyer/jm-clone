@@ -37,7 +37,7 @@ createRoot(document.getElementById("root")).render(
           </Route>
           <Route path="/cart" element={<Layout />}>
             <Route index element={<Cart />} />
-            <Route path="checkout" element={<Checkout />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Route>
           <Route path="/favorite" element={<Layout />}>
             <Route index element={<Favorite />} />
