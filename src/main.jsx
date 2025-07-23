@@ -25,7 +25,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
           </Route>
-          <Route path="user" element={<Layout />}>
+          <Route path="/user" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="signin" element={<Signin />} />
           </Route>
@@ -35,14 +35,14 @@ createRoot(document.getElementById("root")).render(
           <Route path="/search" element={<Layout />}>
             <Route index element={<SearchPage />} />
           </Route>
-          <Route path="cart" element={<Layout />}>
+          <Route path="/cart" element={<Layout />}>
             <Route index element={<Cart />} />
-            <Route path="checkout" element={<Checkout />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Route>
-          <Route path="favorite" element={<Layout />}>
+          <Route path="/favorite" element={<Layout />}>
             <Route index element={<Favorite />} />
           </Route>
-          <Route path="campaign/:collection" element={<Layout />}>
+          <Route path="/campaign/:collection" element={<Layout />}>
             <Route index element={<Campaign />} />
           </Route>
         </Routes>
