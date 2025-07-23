@@ -14,6 +14,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout"
 import Signin from "./pages/Signin";
 import Favorite from "./pages/Favorite";
+import Campaign from "./pages/Campaign";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -40,6 +41,9 @@ createRoot(document.getElementById("root")).render(
           </Route>
           <Route path="favorite" element={<Layout />}>
             <Route index element={<Favorite />} />
+          </Route>
+          <Route path="campaign/:collection" element={<Layout />}>
+            <Route index element={<Campaign />} />
           </Route>
         </Routes>
       </BrowserRouter>
