@@ -13,6 +13,10 @@
     border: none;
   }
 
+  body {
+    color: var(--color-gray-400)
+  }
+
   .nav-text-hover {
     display: block;
     position: relative;
@@ -73,6 +77,12 @@
 
   .main-container {
     max-width: 1284px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  .small-container {
+    max-width: 1140px;
     margin: 0 auto;
     padding: 16px;
   }

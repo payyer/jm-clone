@@ -12,6 +12,7 @@ import SearchPage from "./pages/Search";
 import ScrollToTop from "./lib/ScrollToTop";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout"
+import Signin from "./pages/Signin";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,6 +22,10 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
+          </Route>
+          <Route path="user" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="signin" element={<Signin />} />
           </Route>
           <Route path="/product/:id" element={<Layout />}>
             <Route index element={<ProductPage />} />
