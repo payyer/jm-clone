@@ -13,6 +13,7 @@ import ScrollToTop from "./lib/ScrollToTop";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout"
 import Signin from "./pages/Signin";
+import Favorite from "./pages/Favorite";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -36,6 +37,9 @@ createRoot(document.getElementById("root")).render(
           <Route path="cart" element={<Layout />}>
             <Route index element={<Cart />} />
             <Route path="checkout" element={<Checkout />} />
+          </Route>
+          <Route path="favorite" element={<Layout />}>
+            <Route index element={<Favorite />} />
           </Route>
         </Routes>
       </BrowserRouter>

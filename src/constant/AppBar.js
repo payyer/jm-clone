@@ -1,30 +1,30 @@
 const APP_BAR_CATEGORIES = [
   {
-    link: "/",
+    link: "/search?category=dress",
     text: "Đầm",
   },
   {
-    link: "/",
+    link: "/search?category=clothes",
     text: "Áo",
   },
   {
-    link: "/",
+    link: "/search?category=pants",
     text: "Quần",
   },
   {
-    link: "/",
+    link: "/search?category=skirts",
     text: "Chân váy",
   },
   {
-    link: "/",
+    link: "/search?category=jacket",
     text: "Áo khoác",
   },
   {
-    link: "/",
+    link: "/search?category=",
     text: "Lookbook",
   },
   {
-    link: "/",
+    link: "/search?category=",
     text: "Street 2025",
   },
 ];
