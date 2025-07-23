@@ -1,9 +1,8 @@
 import { Link } from "react-router";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../components/ui/table";
 import { product_02 } from "../../assets/Products"
-import { FaMinus, FaPlus } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
-export default function index() {
+export default function Favorite() {
     return (
         <section className="small-container">
             <h2 className="text-[26px] font-bold uppercase text-center">sản phẩm yêu thích</h2>

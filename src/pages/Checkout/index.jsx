@@ -1,8 +1,7 @@
-import SearchBar from "../../components/SearchBar";
 import CheckoutForm from "./partials/CheckoutForm";
 import TotalCheckout from "./partials/TotalCheckout";
 
-export default function index() {
+export default function Checkout() {
     return (
         <section className="main-container ">
             {/* <SearchBar className={""} /> */}
