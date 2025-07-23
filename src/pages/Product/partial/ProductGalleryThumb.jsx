@@ -1,12 +1,11 @@
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogTrigger,
 } from "@/components/ui/dialog"
 
 export default function ProductGalleryThumb({ thumb }) {
-    const style = { "--url": "url(/src/assets/Products/product_02.jpeg)", "--zoom-x": "0%", "--zoom-y": "0%", "--display": "none" };
+    const style = { "--url": "url(/src/assets/Products/product_02.jpeg)", "--zoom-x": "0%", "--zoom-y": "0%", '--zoom-opacity': '0' };
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -14,7 +13,7 @@ export default function ProductGalleryThumb({ thumb }) {
                     style={style}
                     onMouseMove={(e) => {
                         const zoomImage = e.currentTarget
-                        zoomImage.style.setProperty('--display', 'block')
+                        zoomImage.style.setProperty('--zoom-opacity', '1')
                         let pointer = {
                             x: (e.nativeEvent.offsetX * 100) / zoomImage.offsetWidth,
                             y: (e.nativeEvent.offsetY * 100) / zoomImage.offsetHeight
@@ -25,7 +24,7 @@ export default function ProductGalleryThumb({ thumb }) {
 
                     onMouseOut={(e) => {
                         const zoomImage = e.currentTarget
-                        zoomImage.style.setProperty('--display', 'none')
+                        zoomImage.style.setProperty('--zoom-opacity', '0')
                     }}
                 >
                     <img className='w-auto h-full object-cover' src={thumb} width={462} height={592} alt="Thumb image" loading='lazy' />
