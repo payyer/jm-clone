@@ -29,7 +29,7 @@ export const router = [
         element: <Cart />
     },
     {
-        path: "/car/checkout",
+        path: "/cart/checkout",
         element: <Checkout />
     },
     {

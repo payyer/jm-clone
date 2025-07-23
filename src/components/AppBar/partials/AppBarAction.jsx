@@ -11,14 +11,14 @@ export default function AppBarAction() {
         <IoSearch className="w-[20px] h-auto " />
       </button>
 
-      <Link className="flex gap-1 items-center hover:text-red">
+      <Link to={"/favorite"} className="flex gap-1 items-center hover:text-red">
         <FaRegHeart className="w-[20px]  h-auto" />
         <span className="hidden sm:inline">0</span>
       </Link>
 
       <CartAction />
 
-      <Link className="hidden sm:flex items-center hover:text-red">
+      <Link to={"/user/signin"} className="hidden sm:flex items-center hover:text-red">
         <FaRegUser className="w-[18x] h-auto" />
       </Link>
     </div>
