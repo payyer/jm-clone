@@ -31,23 +31,23 @@ const APP_BAR_CATEGORIES = [
 
 const APP_BAR_POLICY = [
   {
-    link: "/",
+    link: "/shipping-policy",
     text: "Chính sách vận chuyển",
   },
   {
-    link: "/",
+    link: "/points-policy",
     text: "Chính sách tích điểm",
   },
   {
-    link: "/",
+    link: "/return-policy",
     text: "Chính sách đổi trả hàng",
   },
   {
-    link: "/",
+    link: "/privacy-policy",
     text: "Chính sách bảo mật",
   },
   {
-    link: "/",
+    link: "/warranty",
     text: "Chế độ bảo hành trọn đời",
   },
 ];

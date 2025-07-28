@@ -4,14 +4,14 @@ import { useRef, useState } from "react";
 import useClickOutSide from "../../../hooks/useClickOutSide";
 
 export default function CartAction() {
-  const [isCartPopupOpen, setIscartPopupOpen] = useState(false);
+  const [isCartPopupOpen, setIsCartPopupOpen] = useState(false);
 
   const toggleCartPopup = () => {
-    setIscartPopupOpen((prev) => !prev);
+    setIsCartPopupOpen((prev) => !prev);
   };
 
   const cartRef = useRef(null);
-  useClickOutSide(cartRef, () => setIscartPopupOpen(false));
+  useClickOutSide(cartRef, () => setIsCartPopupOpen(false));
 
   return (
     <div className="relative flex items-center" ref={cartRef}>
@@ -22,7 +22,7 @@ export default function CartAction() {
         <PiHandbagBold className="w-[22px] h-auto" />
         <span className="hidden sm:inline">0</span>
       </button>
-      {isCartPopupOpen && <CartPopup isCartPopupOpen={isCartPopupOpen} />}
+      {isCartPopupOpen && <CartPopup setIsCartPopupOpen={setIsCartPopupOpen} />}
     </div>
   );
 }

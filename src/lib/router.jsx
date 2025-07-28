@@ -1,11 +1,12 @@
-import Campaign from "../pages/Campaign";
-import Cart from "../pages/Cart";
-import Checkout from "../pages/Checkout";
-import Favorite from "../pages/Favorite";
-import Home from "../pages/Home";
-import ProductPage from "../pages/Product";
-import SearchPage from "../pages/Search";
-import Signin from "../pages/Signin";
+import { lazy } from "react";
+const Campaign = lazy(() => import("../pages/Campaign"));
+const Cart = lazy(() => import("../pages/Cart"));
+const Checkout = lazy(() => import("../pages/Checkout"));
+const Favorite = lazy(() => import("../pages/Favorite"));
+const Home = lazy(() => import("../pages/Home"));
+const ProductPage = lazy(() => import("../pages/Product"));
+const SearchPage = lazy(() => import("../pages/Search"));
+const Signin = lazy(() => import("../pages/Signin"));
 
 export const router = [
     {

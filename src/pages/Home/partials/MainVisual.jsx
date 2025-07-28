@@ -8,7 +8,7 @@ import {
   mv04,
   mv05,
 } from "../../../assets/Main_visual/index.js";
-import SearchBar from "./SearchBar.jsx";
+import SearchBar from "../../../components/SearchBar";
 
 const mvList = [
   {
@@ -77,7 +77,7 @@ export default function MainVisual() {
       </Swiper>
 
       {/* Search Bar */}
-      <SearchBar />
+      <SearchBar className={"hidden sm:flex absolute bottom-[20px] bg-white max-w-[670px] overflow-hidden border-1 border-white w-full h-[40px] left-1/2 -translate-x-1/2 z-[2] !rounded-[4px]"} />
 
       {/* Pagination Bar */}
       <div className="absolute sm:invisible bottom-[10px] left-0 w-full z-10">

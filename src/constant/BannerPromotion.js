@@ -9,32 +9,32 @@ import {
 
 const BANNER_PROMOTION = [
   {
-    link: "/",
+    link: "/campaign/net",
     altText: "Nét",
     imgLink: mv05,
   },
   {
-    link: "/",
+    link: "/campaign/ha",
     altText: "Hạ",
     imgLink: mv01,
   },
   {
-    link: "/",
+    link: "/campaign/dong-chay-thanh-lich",
     altText: "Dòng chảy thanh lịch",
     imgLink: mv02,
   },
   {
-    link: "/",
+    link: "/campaign/lac-giua-rung-mo",
     altText: "Lạc giữa rừng Mer",
     imgLink: mv03,
   },
   {
-    link: "/",
+    link: "/campaign/du-anh",
     altText: "Dư ảnh",
     imgLink: mv04,
   },
   {
-    link: "/",
+    link: "/campaign/cham",
     altText: "Chạm",
     imgLink: mv06,
   },

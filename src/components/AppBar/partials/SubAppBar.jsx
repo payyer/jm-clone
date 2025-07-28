@@ -5,17 +5,17 @@ import noteIcon from "../../../assets/AppBar/note-icon.png";
 
 const infor = [
   {
-    link: "/",
+    link: "/store-system",
     text: "Hệ thống cửa hàng",
     img: mapsIcon,
   },
   {
-    link: "/",
+    link: "/shipping-information",
     text: "Thông tin vận chuyển",
     img: truckIcon,
   },
   {
-    link: "/",
+    link: "/points-policy",
     text: "Chính sách tích điểm",
     img: noteIcon,
   },
@@ -66,9 +66,8 @@ export default function SubAppBar() {
           <li key={index}>
             <Link
               to={data?.link}
-              className={`uppercase hover-effect text-gray-200 text-[14px] font-bold ${
-                index === 3 && "text-red-100"
-              }`}
+              className={`uppercase hover-effect text-gray-200 text-[14px] font-bold ${index === 3 && "text-red-100"
+                }`}
             >
               {data?.text}
             </Link>
@@ -104,9 +103,8 @@ export default function SubAppBar() {
           <Link
             key={index}
             to={data?.link}
-            className={`flex items-center justify-center rounded-[4px] text-[10px] text-gray-200 font-bold "text-gray-200 h-[38px] w-[80px] border-black-200 border-1 ${
-              index === 0 && "text-red-100 border-pink text-[12px] uppercase"
-            }  `}
+            className={`flex items-center justify-center rounded-[4px] text-[10px] text-gray-200 font-bold "text-gray-200 h-[38px] w-[80px] border-black-200 border-1 ${index === 0 && "text-red-100 border-pink text-[12px] uppercase"
+              }  `}
           >
             {data?.text}
           </Link>

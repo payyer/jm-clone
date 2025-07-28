@@ -28,11 +28,11 @@ export default function Signin() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-[2%] w-full mt-10">
-                <Link to={"/"} className="w-full sm:w-[49%] overflow-hidden block group">
+                <Link to={"/campaign/lac-giua-rung-mo"} className="w-full sm:w-[49%] overflow-hidden block group">
                     <img className="w-full h-auto block object-cover group-hover:scale-[1.2] transition-effect" src={mv03} alt="Thumb" />
                 </Link>
 
-                <Link to={"/"} className="w-full sm:w-[49%] overflow-hidden block group">
+                <Link to={"/campaign/dong-chay-thanh-lich"} className="w-full sm:w-[49%] overflow-hidden block group">
                     <img className="w-full h-auto block object-cover group-hover:scale-[1.2] transition-effect" src={mv02} alt="Thumb" />
                 </Link>
             </div>
