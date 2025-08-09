@@ -6,6 +6,9 @@ import { Input } from "../../../components/ui/input"
 import { Button } from "../../../components/ui/button"
 import { Link } from "react-router"
 import LoginWithGoogle from "./LoginWithGoogle"
+import { useMutation } from "@tanstack/react-query"
+import AuthService from "../../../apis/AuthService/service"
+import { toast } from "sonner"
 
 export default function Login() {
     const formLogin = useForm({
@@ -13,12 +16,23 @@ export default function Login() {
         defaultValues: {
             emailOrPhone: "",
             password: ""
+        },
+    })
+
+    const mutation = useMutation({
+        mutationFn: ({ email, password }) => AuthService.authLogin({ email, password }),
+        onSuccess: (data) => {
+            console.log({ data })
+        },
+        onError: (error) => {
+            toast("Email hoặc SĐT hoặc Password không chính xác")
         }
     })
 
     function loginSubmit(values) {
-        console.log(values)
+        mutation.mutate({ email: values.emailOrPhone, password: values.password })
     }
+
 
     return (
         <>

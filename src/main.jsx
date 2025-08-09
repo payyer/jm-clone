@@ -9,24 +9,31 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import ScrollToTop from "./lib/ScrollToTop";
 import { router } from "./lib/router";
 import NotFoundPage from "./pages/NotFound";
-
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { Toaster } from "sonner";
+const queryClient = new QueryClient()
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Suspense fallback={"Loading..."}>
-          <Routes>
-            <Route path="*" element={<NotFoundPage />}></Route>
-            <Route element={<Layout />}>
-              {router.map((route, index) =>
-                <Route key={index} path={route.path} element={route.element} />
-              )}
-            </Route>
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={false} />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Suspense fallback={"Loading..."}>
+            <Routes>
+              <Route path="*" element={<NotFoundPage />}></Route>
+              <Route element={<Layout />}>
+                {router.map((route, index) =>
+                  <Route key={index} path={route.path} element={route.element} />
+                )}
+              </Route>
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+        <Toaster />
+      </QueryClientProvider>
     </Provider>
   </StrictMode>
 );
