@@ -1,7 +1,7 @@
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "../../components/ui/form"
 import { useFormContext } from 'react-hook-form'
 import { Input } from "../../components/ui/input"
-const CustomInput = ({ label, name, placeholder }) => {
+const CustomInput = ({ label, name, placeholder, type }) => {
     const formContext = useFormContext()
     const { formState: { errors } } = formContext
     return (
@@ -11,7 +11,7 @@ const CustomInput = ({ label, name, placeholder }) => {
                 <FormItem>
                     {label && <FormLabel className={""}>{label}</FormLabel>}
                     <FormControl>
-                        <Input placeholder={placeholder} className={"rounded-none"} {...field} />
+                        <Input type={type ? type : "text"} placeholder={placeholder} className={"rounded-none"} {...field} />
                     </FormControl>
                     {errors && <FormMessage />}
                 </FormItem>

@@ -19,21 +19,23 @@ export default function Login() {
             password: ""
         },
     })
+
     const mutation = useMutation({
         mutationFn: ({ emailOrPhone, password }) => {
-            AuthService.authLogin({ emailOrPhone, password })
+            return AuthService.authLogin({ emailOrPhone, password })
         },
-        onSuccess: () => {
+        onSuccess: (data) => {
             navigate("/")
             toast("Chào mừng bạn đến với JM")
         },
-        onError: () => {
-            toast("Email hoặc SĐT hoặc Password không chính xác")
+        onError: (error) => {
+            toast("Email hoặc SĐT hoặc Password không chính xác", {
+                position: "top-center",
+            })
         }
     })
 
     function loginSubmit(values) {
-        console.log({ values })
         mutation.mutate({ emailOrPhone: values.emailOrPhone, password: values.password })
     }
 
@@ -42,9 +44,9 @@ export default function Login() {
             <Form  {...formLogin}>
                 <form className="space-y-4 mt-4 text-[14px]" onSubmit={formLogin.handleSubmit(loginSubmit)}>
                     <CustomInput label={"Email / SĐT"} name={"emailOrPhone"} placeholder={"Nhập Email hoặc SĐT"} />
-                    <CustomInput label={"Mật khẩu"} name={"password"} placeholder={"Password"} />
+                    <CustomInput label={"Mật khẩu"} type={'password'} name={"password"} placeholder={"Password"} />
                     <Link to={"/user/getpassword"} className="mt-4 block text-right font-semibold underline hover-effect">Quên mật khẩu?</Link>
-                    <Button type={'submit'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] mt-4"}>Đăng nhập</Button>
+                    <Button type={'submit'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] "}>Đăng nhập</Button>
                 </form>
             </Form>
             <LoginWithGoogle />
