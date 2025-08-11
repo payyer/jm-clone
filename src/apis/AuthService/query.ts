@@ -1,4 +1,4 @@
 export interface AuthSignInBody {
-    email: string,
+    emailOrPhone: string,
     password: string
 }
