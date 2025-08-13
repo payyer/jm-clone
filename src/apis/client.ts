@@ -1,5 +1,5 @@
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from "axios"
-
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios"
+import Cookies from "js-cookie"
 export const client = (() => {
     return axios.create({
         baseURL: 'http://localhost:3000/',
@@ -9,6 +9,19 @@ export const client = (() => {
         withCredentials: true
     })
 })()
+
+client.interceptors.response.use(
+    (res: AxiosResponse) => {
+        return res
+    },
+    async (err) => {
+        const status = err.response ? err.response.status : null
+        if (status === 401) {
+            Cookies.remove("isLogged")
+            window.location.href = "/user/signin"
+        }
+    }
+)
 
 const request = async (options: AxiosRequestConfig) => {
     const onSuccess = (response: AxiosResponse) => {

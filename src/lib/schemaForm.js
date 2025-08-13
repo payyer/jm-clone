@@ -23,3 +23,10 @@ export const registerSchema = z.object({
     username: z.string().min(2, { message: "Tên cần nhiều hơn 2 chữ cái" }),
     password: z.string().min(6, { message: "Mật khẩu cần có 6 ký tự trở lên" })
 })
+
+export const profileSchema = z.object({
+    username: z.string().min(3, { message: "Tên người dùng cần 3 chữ trở lên" }),
+    phone: z.string().regex(phoneRegex, { message: "Số điện thoại không hợp lệ" }),
+    email: z.email("Email không hợp lệ"),
+    address: z.string().min(12, "Địa chỉ cần đài hơn 12 ký tự")
+})

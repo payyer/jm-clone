@@ -12,6 +12,7 @@ import NotFoundPage from "./pages/NotFound";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster } from "sonner";
+import ProtectedRoutes from "./lib/ProtectedRoute";
 const queryClient = new QueryClient()
 
 createRoot(document.getElementById("root")).render(
@@ -25,9 +26,16 @@ createRoot(document.getElementById("root")).render(
             <Routes>
               <Route path="*" element={<NotFoundPage />}></Route>
               <Route element={<Layout />}>
-                {router.map((route, index) =>
+                {router.public.map((route, index) =>
                   <Route key={index} path={route.path} element={route.element} />
                 )}
+              </Route>
+              <Route element={<ProtectedRoutes />}>
+                <Route element={<Layout />}>
+                  {router.protected.map((route, index) =>
+                    <Route key={index} path={route.path} element={route.element} />
+                  )}
+                </Route>
               </Route>
             </Routes>
           </Suspense>

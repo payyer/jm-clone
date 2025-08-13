@@ -3,8 +3,11 @@ import CartAction from "./CartAction";
 import { FaRegUser } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
-
+import Cookies from "js-cookie"
+import { useState } from "react";
 export default function AppBarAction() {
+  // const [isLogged, setIsLogged] = useState(!!Cookies.get("isLogged"))
+
   return (
     <div className="flex gap-[12px] sm:gap-[20px] ">
       <button title="Search button" className="sm:hidden hover-effect hover:text-red">
@@ -18,7 +21,7 @@ export default function AppBarAction() {
 
       <CartAction />
 
-      <Link to={"/user/signin"} className="hidden sm:flex items-center hover:text-red">
+      <Link to={"/user/profile"} className="hidden sm:flex items-center hover:text-red">
         <FaRegUser className="w-[18x] h-auto" />
       </Link>
     </div>
