@@ -17,4 +17,19 @@ export default class AuthService {
             data: registerBody
         })
     }
+
+    public static readonly authLogout = () => {
+        return request({
+            url: AuthEndpoints.logout(),
+            method: 'post',
+        })
+    }
+
+    public static readonly loginWithGoogle = (access_token: string) => {
+        return request({
+            url: AuthEndpoints.loginWithGoogle(),
+            method: 'post',
+            data: { access_token }
+        })
+    }
 }

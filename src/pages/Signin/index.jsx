@@ -1,10 +1,16 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Login from "./partials/Login";
 import Register from "./partials/Register";
 import { mv03, mv02 } from "../../assets/Main_visual";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Cookies from "js-cookie"
 export default function Signin() {
     const [step, setStep] = useState("login")
+    const navigate = useNavigate()
+    useEffect(() => {
+        const isLogged = Cookies.get("isLogged")
+        if (isLogged) navigate("/")
+    }, [])
     return (
         <section className="main-container flex flex-col sm:flex-row flex-wrap gap-[4%]">
             <div className="flex justify-center gap-[4%] sm:hidden">

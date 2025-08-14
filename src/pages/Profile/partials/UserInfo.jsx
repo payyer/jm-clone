@@ -1,12 +1,25 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import ProfileForm from "./ProfileForm";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import UserService from "../../../apis/UserService/service";
+import { Button } from "../../../components/ui/button";
+import AuthService from "../../../apis/AuthService/service";
 
 export default function UserInfo() {
+    const navigate = useNavigate()
     const { data: userInfo, isPending } = useQuery({
         queryKey: ["User"],
         queryFn: () => UserService.getProfile()
+    })
+
+    const mutation = useMutation({
+        mutationFn: () => AuthService.authLogout(),
+        onSuccess: () => {
+            navigate("/")
+        },
+        onError: (err) => {
+            console.log({ err })
+        }
     })
     return (
         <>
@@ -21,6 +34,7 @@ export default function UserInfo() {
                         </div>
                     </div>
                     <ProfileForm userInfo={userInfo} />
+                    <Button onClick={mutation.mutate} type={'button'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] mt-4"}>Đăng xuất</Button>
                 </section>
             }
         </>

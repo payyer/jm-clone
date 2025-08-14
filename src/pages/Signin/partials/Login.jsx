@@ -9,6 +9,7 @@ import { useMutation } from "@tanstack/react-query"
 import AuthService from "../../../apis/AuthService/service"
 import { toast } from "sonner"
 import CustomInput from "../../../components/ui/CustomInput"
+import { GoogleOAuthProvider } from "@react-oauth/google"
 
 export default function Login() {
     const navigate = useNavigate()
@@ -49,7 +50,9 @@ export default function Login() {
                     <Button type={'submit'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] "}>Đăng nhập</Button>
                 </form>
             </Form>
-            <LoginWithGoogle />
+            <GoogleOAuthProvider clientId="327616078767-qq8oh091gbu68u8ned84n6se14d7q62n.apps.googleusercontent.com">
+                <LoginWithGoogle />
+            </GoogleOAuthProvider>
         </>
     )
 }

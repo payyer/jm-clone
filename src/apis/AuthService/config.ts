@@ -1,4 +1,6 @@
 export const AuthEndpoints = {
     login: () => `auth/sign-in`,
-    register: () => `auth/register`
+    logout: () => `auth/logout`,
+    register: () => `auth/register`,
+    loginWithGoogle: () => `auth/google`,
 }

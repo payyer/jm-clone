@@ -21,18 +21,14 @@ export default function ProfileForm({ userInfo }) {
         console.log(values)
     }
     return (
-        <>
-
-            <Form {...profileForm} >
-                <form className="space-y-4 mt-4" onSubmit={profileForm.handleSubmit(submitProfileForm)}>
-                    <CustomInput label={'Tên'} name={'username'} />
-                    <CustomInput label={'Số điện thoại'} name={'phone'} />
-                    <CustomInput label={'Email'} name={'email'} />
-                    <CustomInput label={'Địa chỉ'} name={'address'} />
-                    <Button type={'submit'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] mt-4"}>Lưu</Button>
-                </form>
-            </Form>
-            <Button type={'button'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] mt-4"}>Đăng xuất</Button>
-        </>
+        <Form {...profileForm} >
+            <form className="space-y-4 mt-4" onSubmit={profileForm.handleSubmit(submitProfileForm)}>
+                <CustomInput label={'Tên'} name={'username'} />
+                <CustomInput label={'Số điện thoại'} name={'phone'} />
+                <CustomInput label={'Email'} name={'email'} />
+                <CustomInput label={'Địa chỉ'} name={'address'} />
+                <Button type={'submit'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] mt-4"}>Lưu</Button>
+            </form>
+        </Form>
     )
 }
