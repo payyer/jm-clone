@@ -4,13 +4,12 @@ import { registerSchema } from "../../../lib/schemaForm";
 import { Form } from "../../../components/ui/form";
 import { Button } from "../../../components/ui/button";
 import CustomInput from "../../../components/ui/CustomInput";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import AuthService from "../../../apis/AuthService/service";
 import { toast } from "sonner";
 import { useNavigate } from "react-router";
 export default function Register() {
     const navigate = useNavigate();
-
     const formRegister = useForm({
         resolver: zodResolver(registerSchema),
         defaultValues: {
@@ -30,7 +29,7 @@ export default function Register() {
             toast("Chào mừng bạn đến với JM")
         },
         onError: (error) => {
-            toast(error.response.data.message)
+            toast(error.response.data.message, { position: "top-center" })
         }
     })
     function registerSubmit(values) {

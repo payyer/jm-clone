@@ -1,12 +1,13 @@
 import { Link, useNavigate } from "react-router";
 import ProfileForm from "./ProfileForm";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import UserService from "../../../apis/UserService/service";
 import { Button } from "../../../components/ui/button";
 import AuthService from "../../../apis/AuthService/service";
 
 export default function UserInfo() {
     const navigate = useNavigate()
+    const queryClient = useQueryClient()
     const { data: userInfo, isPending } = useQuery({
         queryKey: ["User"],
         queryFn: () => UserService.getProfile()
@@ -15,10 +16,11 @@ export default function UserInfo() {
     const mutation = useMutation({
         mutationFn: () => AuthService.authLogout(),
         onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ["User"] })
             navigate("/")
         },
         onError: (err) => {
-            console.log({ err })
+            // console.log({ err })
         }
     })
     return (

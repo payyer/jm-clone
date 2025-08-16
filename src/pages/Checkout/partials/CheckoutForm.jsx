@@ -26,7 +26,7 @@ export default function CheckoutForm() {
     })
 
     function checkoutSubmit(values) {
-        console.log({ values })
+        // console.log({ values })
     }
     return (
         <div className="cart-container--left  mt-8 sm:mt-0">

@@ -20,7 +20,9 @@ client.interceptors.response.use(
             Cookies.remove("isLogged")
             window.location.href = "/user/signin"
         }
+        return Promise.reject(err)
     }
+
 )
 
 const request = async (options: AxiosRequestConfig) => {
