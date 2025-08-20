@@ -20,7 +20,6 @@ export default function UserInfo() {
             navigate("/")
         },
         onError: (err) => {
-            // console.log({ err })
         }
     })
     return (
@@ -32,7 +31,7 @@ export default function UserInfo() {
                         <img className="block rounded-full" width={56} height={56} src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1114445501.jpg" loading="lazy" decoding="async" />
                         <div className="flex flex-col justify-center ">
                             <span className="text-[16px] font-bold">{userInfo?.username}</span>
-                            <Link to={'/'} className="underline text-[14px] text-red-200 font-medium hover-effect">Đổi mật khẩu</Link>
+                            <Link to={'/user/change-password'} className="underline text-[14px] text-red-200 font-medium hover-effect">Đổi mật khẩu</Link>
                         </div>
                     </div>
                     <ProfileForm userInfo={userInfo} />

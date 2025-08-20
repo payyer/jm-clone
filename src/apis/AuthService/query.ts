@@ -9,3 +9,9 @@ export interface AuthRegister {
     username: string,
     password: string
 }
+
+export interface ResetPassword {
+    email: string,
+    password: string,
+    otpCode: string
+}

@@ -47,7 +47,7 @@ export default function Login() {
                 <form className="space-y-4 mt-4 text-[14px]" onSubmit={formLogin.handleSubmit(loginSubmit)}>
                     <CustomInput label={"Email / SĐT"} name={"emailOrPhone"} placeholder={"Nhập Email hoặc SĐT"} />
                     <CustomInput label={"Mật khẩu"} type={'password'} name={"password"} placeholder={"Password"} />
-                    <Link to={"/user/getpassword"} className="mt-4 block text-right font-semibold underline hover-effect">Quên mật khẩu?</Link>
+                    <Link to={"/user/change-password"} className="mt-4 block text-right font-semibold underline hover-effect">Quên mật khẩu?</Link>
                     <Button type={'submit'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] "}>{mutation.isPending ? <Spinner variant={"circle"} /> : "Đăng nhập"}</Button>
                 </form>
             </Form>

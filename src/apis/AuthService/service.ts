@@ -1,6 +1,6 @@
 import request from "../client"
 import { AuthEndpoints } from "./config"
-import { AuthRegister, AuthSignInBody } from "./query"
+import { AuthRegister, AuthSignInBody, ResetPassword } from "./query"
 export default class AuthService {
     public static readonly authLogin = (signInBody: AuthSignInBody) => {
         return request({
@@ -30,6 +30,22 @@ export default class AuthService {
             url: AuthEndpoints.loginWithGoogle(),
             method: 'post',
             data: { access_token }
+        })
+    }
+
+    public static readonly getOtpByEmail = (email: string) => {
+        return request({
+            url: AuthEndpoints.getOtpByEmail(),
+            method: 'post',
+            data: { email }
+        })
+    }
+
+    public static readonly resetPassword = (resetPasswordBody: ResetPassword) => {
+        return request({
+            url: AuthEndpoints.resetPassword(),
+            method: 'put',
+            data: resetPasswordBody
         })
     }
 }

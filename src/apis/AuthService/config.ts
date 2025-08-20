@@ -3,4 +3,6 @@ export const AuthEndpoints = {
     logout: () => `auth/logout`,
     register: () => `auth/register`,
     loginWithGoogle: () => `auth/google`,
+    getOtpByEmail: () => `email/otp`,
+    resetPassword: () => `auth/reset-password`
 }

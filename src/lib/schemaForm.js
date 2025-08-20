@@ -30,3 +30,13 @@ export const profileSchema = z.object({
     email: z.email("Email không hợp lệ"),
     address: z.string().min(12, "Địa chỉ cần đài hơn 12 ký tự")
 })
+
+export const emailFormSchema = z.object({
+    email: z.email("Email không hợp lệ"),
+})
+
+export const resetPasswordSchema = z.object({
+    email: z.email("Email không hợp lệ"),
+    otpCode: z.string().min(6, { message: "Mã OTP không chính xác" }),
+    password: z.string().min(6, { message: "Mật khẩu cần có 6 ký tự trở lên" })
+})

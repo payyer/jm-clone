@@ -1,6 +1,6 @@
 import { lazy } from "react";
-import Profile from "../pages/Profile";
 const Campaign = lazy(() => import("../pages/Campaign"));
+const Profile = lazy(() => import("../pages/Profile"));
 const Cart = lazy(() => import("../pages/Cart"));
 const Checkout = lazy(() => import("../pages/Checkout"));
 const Favorite = lazy(() => import("../pages/Favorite"));
@@ -8,6 +8,7 @@ const Home = lazy(() => import("../pages/Home"));
 const ProductPage = lazy(() => import("../pages/Product"));
 const SearchPage = lazy(() => import("../pages/Search"));
 const Signin = lazy(() => import("../pages/Signin"));
+const ChangePassword = lazy(() => import("../pages/ChangePassword"));
 
 export const router = {
     public: [
@@ -38,6 +39,10 @@ export const router = {
         {
             path: "/campaign/:collection",
             element: <Campaign />
+        },
+        {
+            path: "/user/change-password",
+            element: <ChangePassword />
         },
     ],
     protected: [

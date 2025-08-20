@@ -45,7 +45,7 @@ export default function ProfileForm({ userInfo }) {
                 <CustomInput label={'Email'} name={'email'} />
                 <CustomInput label={'Địa chỉ'} name={'address'} />
                 <Button type={'submit'} className={"uppercase font-bold text-white w-full rounded-none h-[44px] mt-4"}>
-                    {mutation.isPending ? <Spinner variant={"circle"} /> : "Lưu"}
+                    {mutation.isPending ? <Spinner variant={"circle"} /> : "Cập nhật thông tin"}
                 </Button>
             </form>
         </Form>
