@@ -13,7 +13,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster } from "sonner";
 import ProtectedRoutes from "./lib/ProtectedRoute";
-import { GoogleOAuthProvider } from '@react-oauth/google';
+import DashboardLayout from "./components/DashboardLayout";
 const queryClient = new QueryClient()
 
 createRoot(document.getElementById("root")).render(
@@ -37,6 +37,14 @@ createRoot(document.getElementById("root")).render(
                     <Route key={index} path={route.path} element={route.element} />
                   )}
                 </Route>
+              </Route>
+
+              <Route element={<ProtectedRoutes />}>
+                {router.admin.map((route, index) =>
+                  <Route element={<DashboardLayout />}>
+                    <Route key={index} path={route.path} element={route.element} />
+                  </Route>
+                )}
               </Route>
             </Routes>
           </Suspense>

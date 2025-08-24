@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import DashboardProduct from "../pages/DashboardProduct";
 const Campaign = lazy(() => import("../pages/Campaign"));
 const Profile = lazy(() => import("../pages/Profile"));
 const Cart = lazy(() => import("../pages/Cart"));
@@ -9,6 +10,7 @@ const ProductPage = lazy(() => import("../pages/Product"));
 const SearchPage = lazy(() => import("../pages/Search"));
 const Signin = lazy(() => import("../pages/Signin"));
 const ChangePassword = lazy(() => import("../pages/ChangePassword"));
+const Dashboard = lazy(() => import("../pages/Dashboard"));
 
 export const router = {
     public: [
@@ -57,6 +59,16 @@ export const router = {
         {
             path: "/user/profile",
             element: <Profile />
+        }
+    ],
+    admin: [
+        {
+            path: "/dashboard",
+            element: <Dashboard />
+        },
+        {
+            path: "/dashboard/products",
+            element: <DashboardProduct />
         }
     ]
 }
